@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="turtle_catch_them_all_py" exec="turtle_spawner"/>
+    <node pkg="turtle_catch_them_all_py" exec="turtle_controller"/>
+    <node pkg="turtlesim" exec="turtlesim_node"/>
+
+
+</launch>

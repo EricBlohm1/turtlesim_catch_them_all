@@ -16,7 +16,7 @@ class TurtleControllerNode(Node):
         self.target_ = None
 
         self.kp_vel_ = 1.5
-        self.kp_ang_ = 5
+        self.kp_ang_ = 4
 
         self.pose_subscriber_ = self.create_subscription(
             Pose, "turtle1/pose" ,self.callback_pose, 10
@@ -35,7 +35,7 @@ class TurtleControllerNode(Node):
         )
 
         self.control_timer_ = self.create_timer(
-            0.05, self.control_loop
+            0.02, self.control_loop
         )
 
         self.get_logger().info("Turtle controller node started.")

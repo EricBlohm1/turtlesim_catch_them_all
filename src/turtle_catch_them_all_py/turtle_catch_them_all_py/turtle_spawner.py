@@ -16,7 +16,7 @@ class TurtleSpawnerNode(Node):
         self.spawn_client_ = self.create_client(Spawn, "spawn")
         self.kill_client_ = self.create_client(Kill, "kill")
 
-        self.spawn_timer_ = self.create_timer(2.0, self.call_spawn_turtle)
+        self.spawn_timer_ = self.create_timer(1.5, self.call_spawn_turtle)
 
 
         self.alive_turtles_publisher_ = self.create_publisher(
